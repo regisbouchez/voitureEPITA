@@ -1,0 +1,34 @@
+package fr.epita.persitance;
+
+import fr.epita.entite.VoitureEntite;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+@Repository
+public class VoitureRepositoryImpl implements VoitureRepository {
+ //   @Autowired
+    //   VoitureDAO voitureDAO;
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("voiturePU");
+    EntityManager em = emf.createEntityManager() ;
+    @Override
+    public void save (VoitureEntite voiture) {
+
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("voiturePU") ;
+        EntityManager em = emf.createEntityManager() ;
+        System.out.println("entitemanger voiture:" + voiture);
+        try {
+            em.getTransaction().begin();
+            em.persist(voiture);
+            em.getTransaction().commit();
+        }catch(Exception se) {
+            em.getTransaction().rollback();
+        }
+        finally {
+            em.close();
+        }
+    }
+}
