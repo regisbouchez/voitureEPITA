@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b212815-d2f6-44a5-b92e-a58294918128" name="Default Changelist" comment="" />
+    <list default="true" id="8b212815-d2f6-44a5-b92e-a58294918128" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionVoiture-Entite/target/GestionVoiture-Entite-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/GestionVoiture-Entite/target/GestionVoiture-Entite-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionVoiture-Persistance/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GestionVoiture-Persistance/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionVoiture-Persistance/src/main/java/fr/epita/persitance/VoitureRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/GestionVoiture-Persistance/src/main/java/fr/epita/persitance/VoitureRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionVoiture-Persistance/target/GestionVoiture-Persistance-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/GestionVoiture-Persistance/target/GestionVoiture-Persistance-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionVoiture-Persistance/target/classes/fr/epita/persitance/VoitureRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/GestionVoiture-Persistance/target/classes/fr/epita/persitance/VoitureRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionVoiture-Persistance/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/GestionVoiture-Persistance/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionVoiture-Persistance/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/GestionVoiture-Persistance/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionVoiture-Service/src/main/java/fr/epita/service/VoitureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GestionVoiture-Service/src/main/java/fr/epita/service/VoitureService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionVoiture-Service/target/GestionVoiture-Service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/GestionVoiture-Service/target/GestionVoiture-Service-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionVoiture-Service/target/classes/fr/epita/service/VoitureService.class" beforeDir="false" afterPath="$PROJECT_DIR$/GestionVoiture-Service/target/classes/fr/epita/service/VoitureService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionVoiture-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GestionVoiture-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionVoiture-web/target/GestionVoiture-web-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/GestionVoiture-web/target/GestionVoiture-web-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionVoiture-web/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/GestionVoiture-web/target/maven-archiver/pom.properties" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,21 +33,30 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1T8z69KROfgKzy4qOInz9f3hxEg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/GestionVoiture-Persistance/src/main/resources/META-INF" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/GestionVoiture-web/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BNPPARIBAS\Documents\userapp\GestionVoiture\GestionVoiture-web\src\main\resources" />
       <recent name="C:\Users\BNPPARIBAS\Documents\userapp\GestionVoiture\GestionVoiture-Entite\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="fr.epita.persitance" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\BNPPARIBAS\Documents\userapp\GestionVoiture\GestionVoiture-web\src\main\resources" />
+      <recent name="C:\Users\BNPPARIBAS\Documents\userapp\GestionVoiture\GestionVoiture-Service\src\main\resources" />
+      <recent name="C:\Users\BNPPARIBAS\Documents\userapp\GestionVoiture\GestionVoiture-Persistance\src\main\resources" />
       <recent name="C:\Users\BNPPARIBAS\Documents\userapp\GestionVoiture\GestionVoiture-Persistance\src\main\resources\META-INF" />
     </key>
   </component>
@@ -79,28 +105,26 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/GestionVoiture-Persistance/src/main/java/fr/epita/persitance/VoitureRepositoryImpl.java</url>
-          <line>24</line>
+          <line>31</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/GestionVoiture-Persistance/src/main/java/fr/epita/persitance/VoitureRepositoryImpl.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/GestionVoiture-Persistance/src/main/java/fr/epita/persitance/VoitureRepositoryImpl.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/GestionVoiture-Persistance/src/main/java/fr/epita/persitance/VoitureRepositoryImpl.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

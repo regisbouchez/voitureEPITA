@@ -10,7 +10,6 @@ public class VoitureService {
     @Autowired
     VoitureRepository voitureRepository;
 
-
     public void creerVoiture (VoitureEntite voiture) {
        voitureRepository.save(voiture);
     }

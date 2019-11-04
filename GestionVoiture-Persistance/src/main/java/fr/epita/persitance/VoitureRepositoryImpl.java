@@ -11,15 +11,14 @@ import javax.persistence.Persistence;
 @Repository
 public class VoitureRepositoryImpl implements VoitureRepository {
  //   @Autowired
-    //   VoitureDAO voitureDAO;
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("voiturePU");
+  //  VoitureDAO voitureDAO;
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("voiturePU") ;
     EntityManager em = emf.createEntityManager() ;
     @Override
-    public void save (VoitureEntite voiture) {
-
+    public void save(VoitureEntite voiture) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("voiturePU") ;
         EntityManager em = emf.createEntityManager() ;
-        System.out.println("entitemanger voiture:" + voiture);
+        System.out.println("juste avant de créer");
         try {
             em.getTransaction().begin();
             em.persist(voiture);
