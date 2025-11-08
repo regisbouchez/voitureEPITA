@@ -1,0 +1,81 @@
+package com.example.security;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import javax.crypto.Cipher;
+import javax.crypto.spec.GCMParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
+import java.security.SecureRandom;
+import java.util.Base64;
+
+/**
+ * Service de chiffrement/déchiffrement AES simplifié.
+ * - Clé injectée depuis application.yaml (Base64)
+ * - Mode AES/GCM/NoPadding
+ * - IV aléatoire pour chaque chiffrement
+ * - Utilisation de ByteBuffer pour combiner IV + ciphertext
+ */
+@Component
+public class AesEncryptionService {
+
+    private static final String ALGO = "AES/GCM/NoPadding";
+    private static final int IV_LEN = 12;      // 96 bits pour GCM
+    private static final int TAG_BITS = 128;   // Tag d'authentification
+
+    private final SecretKeySpec keySpec;
+    private final SecureRandom random = new SecureRandom();
+
+    public AesEncryptionService(@Value("${aes.key}") String base64Key) {
+        byte[] keyBytes = Base64.getDecoder().decode(base64Key);
+        this.keySpec = new SecretKeySpec(keyBytes, "AES");
+    }
+
+    /** Chiffre un texte et renvoie Base64(IV + ciphertext) */
+    public String encrypt(String plainText) {
+        try {
+            byte[] iv = new byte[IV_LEN];
+            random.nextBytes(iv);
+
+            Cipher cipher = Cipher.getInstance(ALGO);
+            cipher.init(Cipher.ENCRYPT_MODE, keySpec, new GCMParameterSpec(TAG_BITS, iv));
+            byte[] encrypted = cipher.doFinal(plainText.getBytes(StandardCharsets.UTF_8));
+
+            // Concaténation IV + ciphertext avec ByteBuffer
+            ByteBuffer buffer = ByteBuffer.allocate(iv.length + encrypted.length);
+            buffer.put(iv);
+            buffer.put(encrypted);
+
+            return Base64.getEncoder().encodeToString(buffer.array());
+        } catch (Exception e) {
+            throw new IllegalStateException("Erreur chiffrement AES", e);
+        }
+    }
+
+    /** Déchiffre un texte Base64 généré par encrypt() */
+    public String decrypt(String encryptedBase64) {
+        try {
+            byte[] allBytes = Base64.getDecoder().decode(encryptedBase64);
+            ByteBuffer buffer = ByteBuffer.wrap(allBytes);
+
+            byte[] iv = new byte[IV_LEN];
+            buffer.get(iv); // récupère les 12 premiers octets
+            byte[] ciphertext = new byte[buffer.remaining()];
+            buffer.get(ciphertext);
+
+            Cipher cipher = Cipher.getInstance(ALGO);
+            cipher.init(Cipher.DECRYPT_MODE, keySpec, new GCMParameterSpec(TAG_BITS, iv));
+
+            byte[] decrypted = cipher.doFinal(ciphertext);
+            return new String(decrypted, StandardCharsets.UTF_8);
+        } catch (Exception e) {
+            throw new IllegalStateException("Erreur déchiffrement AES", e);
+        }
+    }
+}
+
+
+
+openssl rand -base64 32
